@@ -1,3 +1,4 @@
+![](/ERM)
 CREATE TABLE awesome.`user` (
 	user_id BIGINT NOT NULL AUTO_INCREMENT,
 	username VARCHAR(20) NOT NULL,
