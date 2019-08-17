@@ -8,8 +8,7 @@ export const VerifyToken : RequestHandler = async (req: Request, res : Response,
     if ( isNullOrUndefined(req.body.token)) {
         return res.json(new BaseRespone().GetReponse(APIStatus.FAIL, ErrorCode.BAD_REQUEST));
     } 
-    let token = req.body.token;
-    let [error, user] = await TokenVerify(token);
+    let [error, user] = await TokenVerify(req.body.token);
     if (error) {
         return res.json(new BaseRespone().GetReponse(APIStatus.FAIL, parseInt(error.message)));
     }

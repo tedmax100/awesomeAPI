@@ -13,15 +13,15 @@ export class UserRoutes {
     }
 
     public init() {
-        this.router.get("/", this.DefaultHandler);
+        //this.router.get("/", this.DefaultHandler);
         this.router.post("/register", this.Register);
         this.router.post("/login", this.Login);
         this.router.post("/message", VerifyToken, this.PostMessage);
         this.router.post("/message/reply", VerifyToken, this.ReplyMessage);
     }
-    private DefaultHandler = async (req: Request, res: Response) => {
+/*     private DefaultHandler = async (req: Request, res: Response) => {
         return res.json("ok");
-    }
+    } */
 
     private ReplyMessage = async (req: Request, res: Response) => {
         const user = req.user as models.User;
@@ -47,9 +47,7 @@ export class UserRoutes {
 
     private Register = async (req: Request, res: Response) => {
         const user = new models.User();
-        let valid = user.SetUserByRequest(req).isValid();
-        if (valid == false) {
-            let aa = user.GetRegisterReponse(APIStatus.FAIL);
+        if (user.SetUserByRequest(req).isValid() == false) {
             return res.json(user.GetRegisterReponse(APIStatus.FAIL));
         }
         let registerErr = await user.RegisterUser();
@@ -61,8 +59,7 @@ export class UserRoutes {
 
     private Login = async (req: Request, res: Response) => {
         const user = new models.User();
-        let valid = user.SetUserByRequest(req).isValid();
-        if (valid == false) {
+        if (user.SetUserByRequest(req).isValid() == false) {
             return res.json(user.GetLoginReponse(APIStatus.FAIL, undefined));
         }
         let loginErr = await user.LoginUser();
