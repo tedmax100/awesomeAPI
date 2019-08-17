@@ -8,17 +8,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "bcrypt": "^3.0.2",
     "body-parser": "~1.18.2",
-    "chance": "^1.0.16",
     "cookie-parser": "~1.4.3",
     "express": "^4.16.3",
     "form-data": "^2.3.2",
     "helmet": "^3.12.1",
     "jade": "~1.11.0",
-    "js-sha512": "^0.8.0",
     "jsonwebtoken": "^8.4.0",
-    "jssha": "^2.3.1",
     "lodash": "^4.17.15",
     "mysql": "^2.17.1",
     "serve-favicon": "~2.4.5",
@@ -26,22 +22,19 @@
     "winston-daily-rotate-file": "^3.3.3"
   },
   "devDependencies": {
-    "@types/amqplib": "^0.5.8",
-    "@types/express": "^4.16.0",
+    "@types/express": "^4.17.0",
     "@types/helmet": "0.0.38",
     "@types/http-errors": "^1.6.1",
     "@types/jest": "~23.3.10",
-    "@types/jsonwebtoken": "^7.2.8",
     "@types/lodash": "^4.14.118",
     "@types/mysql": "^2.15.4",
     "@types/node": "^10.11.0",
-    "@types/rewire": "^2.5.28",
     "@types/supertest": "^2.0.7",
     "@types/winston": "^2.4.4",
     "jest": "^24.8.0",
     "mock-express-request": "^0.2.2",
     "mock-express-response": "^0.2.2",
-    "rewire": "^4.0.1",
-    "supertest": "^3.3.0"
+    "supertest": "^3.3.0",
+    "ts-node": "^8.3.0"
   }
 }

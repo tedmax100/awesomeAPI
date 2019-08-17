@@ -1,10 +1,10 @@
 FROM node:10.15.3-jessie-slim
 
-RUN mkdir -p /usr/src/bo_portal
-WORKDIR /usr/src/bo_portal
+RUN mkdir -p /usr/src/awesomeAPI
+WORKDIR /usr/src/awesomeAPI
 
-COPY package.json /usr/src/bo_portal
-COPY . /usr/src/bo_portal
+COPY package.json /usr/src/awesomeAPI
+COPY . /usr/src/awesomeAPI
 
 RUN npm install
 RUN npm audit fix

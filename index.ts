@@ -1,7 +1,6 @@
 import * as http from "http";
 import App from "./app";
 
-const _moduleTag = "index";
 // -->Set: port
 const port = normalizePort(process.argv[3] || "8800");
 App.set("port", port);
@@ -38,7 +37,6 @@ function normalizePort(val: number|string): number|string|boolean {
 }
 
 function onError(error: NodeJS.ErrnoException): void {
-    const _funTag = _moduleTag + "_Push";
     if (error.syscall !== "listen") { throw error; }
     let bind = (typeof port === "string") ? "Pipe " + port : "Port " + port;
     switch (error.code) {
