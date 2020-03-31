@@ -4,7 +4,7 @@ import App from "./app";
 // -->Set: port
 const port = normalizePort(process.argv[3] || "8800");
 App.set("port", port);
-// for test
+
 // -->Set: headers
 /*
 App.all("*", function(req, res, next) {
